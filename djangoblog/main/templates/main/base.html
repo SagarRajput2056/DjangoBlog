@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Django Blog</title>
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <a href="/">
+                <i class="fas fa-blog"></i>
+                <strong>DJANGO BLOG</strong>
+            </a>
+        </div>
+        <div class="search-bar">
+            <form action="" method="GET">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Django Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
