@@ -18,14 +18,14 @@
             </a>
         </div>
         <div class="search-bar">
-            <form action="" method="GET">
-                <input type="text" placeholder="Search...">
+            <form action="{% url 'search' %}" method="GET">
+                <input type="text" name="query" placeholder="Search...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
         </div>
         <ul class="nav-links">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
         </ul>
     </nav>
     

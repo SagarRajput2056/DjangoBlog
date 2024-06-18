@@ -1,5 +1,6 @@
 /* main/static/main/styles.css */
 
+/* Reset and basic layout */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,8 +8,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #e7e6e6;
 }
 
+/* Navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -27,10 +30,10 @@ body {
     font-size: 24px;
     margin-right: 10px;
 }
-.navbar .left a{
-    text-decoration: none;
-}
+
+.navbar .left a,
 .navbar .left strong {
+    text-decoration: none;
     color: white;
     font-size: 24px;
 }
@@ -62,7 +65,7 @@ body {
 
 .navbar .search-bar input[type="text"]:focus {
     border-color: #ff8c00;
-    box-shadow: 0 0 5px #ff8c00; 
+    box-shadow: 0 0 5px #ff8c00;
 }
 
 .navbar .search-bar button {
@@ -96,13 +99,141 @@ body {
     text-decoration: underline;
 }
 
+/* Content styles */
 .content {
     flex: 1;
     padding: 20px;
+    box-sizing: border-box;
 }
+
+/* Footer styles */
 .footer {
-    background: linear-gradient(to right, #4b6cb7, #182848); 
+    background: linear-gradient(to right, #4b6cb7, #182848);
     color: white;
     text-align: center;
     padding: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Posts styles */
+.posts .post {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.posts .post:hover {
+    transform: scale(1.02);
+}
+
+.posts .post a {
+    text-decoration: none;
+    color: #333;
+}
+
+.posts .post h2 {
+    margin-top: 0;
+    color: #4b6cb7;
+}
+
+.posts .post p {
+    margin: 5px 0;
+}
+
+.posts .post small {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Additional styles for specific sections */
+.about-content,
+.category-content,
+.post-content,
+.search-content {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1,
+.category-content h1,
+.post-content h1,
+.search-content h1 {
+    color: #4b6cb7;
+}
+
+.about-content p,
+.category-content p,
+.post-content p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-content ul,
+.category-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-content ul li,
+.category-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content ul li strong,
+.category-content ul li strong {
+    color: #4b6cb7;
+}
+
+/* Additional styles for detail page comments */
+.post-content .comments {
+    margin-top: 20px;
+}
+
+.post-content .comments h2 {
+    color: #4b6cb7;
+    margin-bottom: 10px;
+}
+
+.post-content .comments form {
+    margin-bottom: 20px;
+}
+
+.post-content .comments form input[type="submit"] {
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-content .comments form input[type="submit"]:hover {
+    background-color: #182848;
+}
+
+.post-content .comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-content .comment strong {
+    color: #4b6cb7;
+}
+
+.post-content .comment small {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
 }
